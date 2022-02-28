@@ -4,5 +4,6 @@ RUN apt-get update && apt-get install -y dnsutils
 
 COPY docker_entrypoint.sh DRipper.py headers.txt /app/
 
+RUN chmod +x /app/docker_entrypoint.sh
 WORKDIR /app
 ENTRYPOINT ["./docker_entrypoint.sh"]
